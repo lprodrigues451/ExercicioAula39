@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margem_16"
         android:hint="@string/informando_que_digita"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         android:textSize="@dimen/fonte_12"
         android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
