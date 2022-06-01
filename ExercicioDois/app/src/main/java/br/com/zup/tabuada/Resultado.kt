@@ -1,6 +1,7 @@
 package br.com.zup.tabuada
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -17,20 +18,24 @@ class Resultado : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle("Resultado")
         recuperarDados()
+
+        binding.butaoRecalcularTabuada.setOnClickListener {
+            val intentUm = Intent(this, MainActivity::class.java)
+            startActivity(intentUm)
+        }
     }
 
 
     private fun recuperarDados(){
         val tabuada = intent.getParcelableExtra<Tabuada>(TABUADA)
         var mostrar = ""
-        var i = 0
-        while (i < 10){
-            mostrar = "${tabuada?.getValor()} X $i"
+        var i = 1
+        while (i <= 10){
+            mostrar = mostrar + tabuada?.getValor() + "X" + i + "=" + (tabuada?.getValor()?.times(i)) + "\n"
             i++
         }
+        binding.titulo.text = "Tabuada do ${tabuada?.getValor()}"
         binding.descricao.text = mostrar
-
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
