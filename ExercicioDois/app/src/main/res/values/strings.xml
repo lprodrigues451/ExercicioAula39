@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tabuada</string>
+    <string name="descricao_do_app">Vamos calcular a tabuada, digite um valor e daremos a você a tabuada do número escolhido!</string>
+    <string name="informando_que_digita">Digite o valor da tabuada</string>
+    <string name="botão_calcular">CALCULAR TABUADA</string>
+    <string name="tabuada">Tabuada do</string>
+    <string name="resultado">resultado</string>
+    <string name="recalcular_tabuada_botao">RECALCULAR TABUADA</string>
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.MainActivity">
+
+    <ImageView
+        android:id="@+id/imagemCarrinho"
+        android:layout_width="@dimen/tamanho_125"
+        android:layout_height="@dimen/tamanho_125"
+        android:layout_margin="16sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/carrinho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/Descricao_do_app"
+        android:textSize="@dimen/fonte_12"
+        app:layout_constraintBottom_toBottomOf="@+id/imagemCarrinho"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imagemCarrinho"
+        app:layout_constraintTop_toTopOf="@id/imagemCarrinho"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etNomeProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:hint="@string/nome_produto"
+        android:inputType="text"
+        android:textSize="@dimen/fonte_12"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imagemCarrinho"
+        app:layout_constraintTop_toBottomOf="@+id/imagemCarrinho"/>
+
+    <EditText
+        android:id="@+id/etQtdProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:hint="@string/qtd_produto"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/fonte_12"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etNomeProduto"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeProduto"/>
+
+    <EditText
+        android:id="@+id/etValorProduto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margem_16"
+        android:hint="@string/valor_produto"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/fonte_12"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etQtdProduto"
+        app:layout_constraintTop_toBottomOf="@+id/etQtdProduto"/>
+
+    <Button
+        android:id="@+id/butaoCalcular"
+        android:backgroundTint="@color/terceiraCor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALCULAR"
+        android:layout_margin="@dimen/margem_16"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValorProduto"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
